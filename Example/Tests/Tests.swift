@@ -19,11 +19,10 @@ class Tests: XCTestCase {
         XCTAssert(true, "Pass")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
+    func testCCContact() {
+        let contact = CCContact(name: "nome", telephone: "12345", user: 1)
+        XCTAssertEqual("nome", contact.name)
+        XCTAssertEqual("12345", contact.telephone)
+        XCTAssertEqual(1, contact.user)
     }
-    
 }

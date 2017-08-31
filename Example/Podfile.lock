@@ -1,0 +1,16 @@
+PODS:
+  - CloudContactSDK (0.1.0)
+
+DEPENDENCIES:
+  - CloudContactSDK (from `../`)
+
+EXTERNAL SOURCES:
+  CloudContactSDK:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CloudContactSDK: 5b03f3a2a8e5a8e6915925754b394ac04e9d39f4
+
+PODFILE CHECKSUM: c1f49c03722385a51d30404c1ab3a5a64c245c71
+
+COCOAPODS: 1.2.0
