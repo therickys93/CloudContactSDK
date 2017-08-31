@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CloudContactSDK_Example' do
+  pod 'CloudContactSDK', :path => '../'
+
+  target 'CloudContactSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
