@@ -11,11 +11,21 @@ import Foundation
 public class CCContact {
     
     public var name: String {
-        return self._name
+        set {
+           self._name = newValue
+        }
+        get {
+            return self._name
+        }
     }
     
     public var telephone: String {
-        return self._telephone
+        set {
+            self._telephone = newValue
+        }
+        get {
+            return self._telephone
+        }
     }
     
     public var user: Int {
@@ -34,5 +44,28 @@ public class CCContact {
         self._user = user
     }
     
+    init(id: Int, name: String, telephone: String, user: Int){
+        self._id = id
+        self._name = name
+        self._telephone = telephone
+        self._user = user
+    }
+    
+    func toJsonNoID() -> Data? {
+        let json: [String: Any] = ["name": "\(self._name)",
+                                   "telephone":"\(self._telephone)",
+                                   "demouser_id": self._user]
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        return jsonData
+    }
+    
+    func toJsonWithID() -> Data? {
+        let json: [String: Any] = ["name": "\(self._name)",
+                                    "telephone":"\(self._telephone)",
+                                    "demouser_id": self._user,
+                                    "id": self._id]
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        return jsonData
+    }
     
 }

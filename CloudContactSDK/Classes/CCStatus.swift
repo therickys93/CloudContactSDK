@@ -18,12 +18,18 @@ public class CCStatus {
         return self._server
     }
     
+    public var message: String {
+        return self._message
+    }
+    
     private var _database: Bool
     private var _server: Bool
+    private var _message: String
     
-    init(database: Bool, server: Bool) {
+    init(database: Bool, server: Bool, message: String) {
         self._database = database
         self._server = server
+        self._message = message
     }
     
 }

@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9158CDA6FEF82445EE4172A9 /* Pods_CloudContactSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32574591C30CB5298C29739C /* Pods_CloudContactSDK_Example.framework */; };
+		9C03E4471F5AFB0100BB5CD3 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03E4461F5AFB0100BB5CD3 /* EditTableViewController.swift */; };
 		9C65B2FD1F58581A00579B1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65B2FC1F58581A00579B1E /* LoginViewController.swift */; };
+		9CC10D651F5883050094E347 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC10D641F5883050094E347 /* ContactsTableViewController.swift */; };
 		F888B411C92A5CE8F86C9EF1 /* Pods_CloudContactSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98BF7591FEF93DF4A7FF9E91 /* Pods_CloudContactSDK_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +37,6 @@
 		607FACD01AFB9204008FA782 /* CloudContactSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudContactSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -45,7 +45,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		98BF7591FEF93DF4A7FF9E91 /* Pods_CloudContactSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudContactSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4C20280FC7EB57F5963FD5 /* Pods-CloudContactSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudContactSDK_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudContactSDK_Example/Pods-CloudContactSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9C03E4461F5AFB0100BB5CD3 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		9C65B2FC1F58581A00579B1E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9CC10D641F5883050094E347 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		B324395DF87D2589A3DDFADC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B665DC2A5940A66A2675CB09 /* Pods-CloudContactSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudContactSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudContactSDK_Tests/Pods-CloudContactSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7D566C18E922BE2163B019E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -96,8 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				9CC10D641F5883050094E347 /* ContactsTableViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				9C03E4461F5AFB0100BB5CD3 /* EditTableViewController.swift */,
 				9C65B2FC1F58581A00579B1E /* LoginViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -365,7 +368,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C65B2FD1F58581A00579B1E /* LoginViewController.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				9C03E4471F5AFB0100BB5CD3 /* EditTableViewController.swift in Sources */,
+				9CC10D651F5883050094E347 /* ContactsTableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +504,7 @@
 			baseConfigurationReference = 54B829C55A0215716FDF8113 /* Pods-CloudContactSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CloudContactSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -514,6 +519,7 @@
 			baseConfigurationReference = 9A4C20280FC7EB57F5963FD5 /* Pods-CloudContactSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CloudContactSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -527,6 +533,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B665DC2A5940A66A2675CB09 /* Pods-CloudContactSDK_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -547,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5306DF5AE7FF1BE59547B211 /* Pods-CloudContactSDK_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -18,7 +18,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTextField: UITextField! {
         didSet {
             self.usernameTextField?.delegate = self
-            self.usernameTextField?.becomeFirstResponder()
         }
     }
     
@@ -37,13 +36,56 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.passwordTextField.becomeFirstResponder()
         }
         if textField == self.passwordTextField {
+            
+        }
+        return true
+    }
+    
+    private func loginUser() {
+        if self.usernameTextField.text != nil, self.passwordTextField.text != nil {
             let request = CCRequest()
             request.login(username: self.usernameTextField.text!, password: self.passwordTextField.text!, completionHandler: { [weak self] user in
                 self?.user = user
                 self?.performSegue(withIdentifier: "Login", sender: nil)
             })
         }
-        return true
+    }
+    
+    @IBAction func statusButton(_ sender: UIButton) {
+        status()
+    }
+    
+    private func status() {
+        let request = CCRequest()
+        request.status { [weak self] status in
+            DispatchQueue.main.async {
+                self?.displayStatus(status)
+            }
+        }
+    }
+    
+    private func displayStatus(_ status: CCStatus) {
+        let alert = UIAlertController(title: "Server Response", message: status.message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func login(_ sender: UIButton) {
+        loginUser()
+    }
+
+    @IBAction func register(_ sender: Any) {
+        registerUser()
+    }
+    
+    private func registerUser() {
+        if self.usernameTextField.text != nil, self.passwordTextField.text != nil {
+            let request = CCRequest()
+            request.register(username: self.usernameTextField.text!, password: self.passwordTextField.text!, completionHandler: { [weak self] user in
+                self?.user = user
+                self?.performSegue(withIdentifier: "Login", sender: nil)
+            })
+        }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

@@ -8,8 +8,25 @@
 
 import Foundation
 
-public class CCUser {
+public class CCUser: NSObject, NSCoding {
     
+    
+    public required init?(coder decoder: NSCoder) {
+        self._username = decoder.decodeObject(forKey: "username") as? String ?? ""
+        self._id = decoder.decodeInteger(forKey: "id")
+        self._key = decoder.decodeObject(forKey: "key") as? String ?? ""
+        self._secret = decoder.decodeObject(forKey: "secret") as? String ?? ""
+        self._password = decoder.decodeObject(forKey: "password") as? String ?? ""
+    }
+
+    public func encode(with coder: NSCoder) {
+        coder.encode(username, forKey: "username")
+        coder.encode(key, forKey: "key")
+        coder.encode(secret, forKey: "secret")
+        coder.encode(id, forKey: "id")
+        coder.encode(_password, forKey: "password")
+    }
+
     public var id: Int {
         return _id
     }
