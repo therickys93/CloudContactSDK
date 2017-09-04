@@ -1,6 +1,5 @@
 import UIKit
 import XCTest
-import CloudContactSDK
 
 class Tests: XCTestCase {
     
@@ -17,12 +16,5 @@ class Tests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
-    }
-    
-    func testCCContact() {
-        let contact = CCContact(name: "nome", telephone: "12345", user: 1)
-        XCTAssertEqual("nome", contact.name)
-        XCTAssertEqual("12345", contact.telephone)
-        XCTAssertEqual(1, contact.user)
     }
 }
