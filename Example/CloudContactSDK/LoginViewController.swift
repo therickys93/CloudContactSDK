@@ -78,6 +78,35 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         registerUser()
     }
     
+    @IBAction func unregister(_ sender: UIButton) {
+        unregisterUser()
+        self.usernameTextField.text = nil
+        self.passwordTextField.text = nil
+    }
+    
+    private func unregisterUser() {
+        if self.usernameTextField.text != nil, self.passwordTextField.text != nil, !(self.usernameTextField.text?.isEmpty)!, !(self.passwordTextField.text?.isEmpty)! {
+            let request = CCRequest()
+            request.login(username: self.usernameTextField.text!, password: self.passwordTextField.text!, completionHandler: { user in
+                request.unregister(user, completionHandler: { [weak self] success in
+                    DispatchQueue.main.async {
+                        self?.displaySuccess(success)
+                    }
+                })
+            })
+        }
+    }
+    
+    private func displaySuccess(_ success: Bool) {
+        var message = "Unregister failed"
+        if success {
+            message = "Unregister successful"
+        }
+        let alert = UIAlertController(title: "Unregister Response", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
     private func registerUser() {
         if self.usernameTextField.text != nil, self.passwordTextField.text != nil, !(self.usernameTextField.text?.isEmpty)!, !(self.passwordTextField.text?.isEmpty)! {
             let request = CCRequest()

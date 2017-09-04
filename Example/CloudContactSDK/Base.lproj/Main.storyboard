@@ -139,6 +139,18 @@
                                     <action selector="statusButton:" destination="NuL-7X-6Yw" eventType="touchUpInside" id="Npy-pn-SG9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nn1-xP-fpd">
+                                <rect key="frame" x="131" y="298" width="113" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="77w-LE-Q0V"/>
+                                    <constraint firstAttribute="height" constant="71" id="fl9-9Y-Ts5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Unregister"/>
+                                <connections>
+                                    <action selector="unregister:" destination="NuL-7X-6Yw" eventType="touchUpInside" id="2oG-CW-Osx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -155,6 +167,8 @@
                             <constraint firstItem="z7u-Be-XMd" firstAttribute="leading" secondItem="olc-Zh-UOr" secondAttribute="leading" id="gZG-74-erY"/>
                             <constraint firstItem="elq-1Y-506" firstAttribute="top" secondItem="cCd-al-SFU" secondAttribute="top" id="gyr-a2-h3y"/>
                             <constraint firstItem="olc-Zh-UOr" firstAttribute="leading" secondItem="CcW-nd-aM2" secondAttribute="leading" id="iQx-kL-4QM"/>
+                            <constraint firstItem="nn1-xP-fpd" firstAttribute="centerY" secondItem="TGl-i5-Zsh" secondAttribute="centerY" id="krm-Rd-AdZ"/>
+                            <constraint firstItem="nn1-xP-fpd" firstAttribute="centerX" secondItem="z7u-Be-XMd" secondAttribute="centerX" id="nae-Y8-rHI"/>
                             <constraint firstItem="CcW-nd-aM2" firstAttribute="leading" secondItem="TGl-i5-Zsh" secondAttribute="leadingMargin" id="nbh-R6-vBG"/>
                             <constraint firstItem="olc-Zh-UOr" firstAttribute="trailing" secondItem="CcW-nd-aM2" secondAttribute="trailing" id="oJ1-hn-sRu"/>
                             <constraint firstItem="cCd-al-SFU" firstAttribute="trailing" secondItem="z7u-Be-XMd" secondAttribute="trailing" id="v7w-lP-k4q"/>
