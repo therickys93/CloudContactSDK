@@ -150,7 +150,22 @@ class ContactsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        if self.contacts.count > 0 {
+            self.tableView.separatorStyle = .singleLine
+            self.tableView.backgroundView = nil
+            return 1
+        } else {
+            let message = "No data is currently available.\nPlease press the + button."
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+            label.text = message
+            label.textColor = UIColor.black
+            label.numberOfLines = 0
+            label.textAlignment = .center
+            label.sizeToFit()
+            self.tableView.backgroundView = label
+            self.tableView.separatorStyle = .none
+            return 0
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
