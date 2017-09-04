@@ -42,7 +42,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func loginUser() {
-        if self.usernameTextField.text != nil, self.passwordTextField.text != nil {
+        if self.usernameTextField.text != nil, self.passwordTextField.text != nil, !(self.usernameTextField.text?.isEmpty)!, !(self.passwordTextField.text?.isEmpty)! {
             let request = CCRequest()
             request.login(username: self.usernameTextField.text!, password: self.passwordTextField.text!, completionHandler: { [weak self] user in
                 self?.user = user
@@ -79,7 +79,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func registerUser() {
-        if self.usernameTextField.text != nil, self.passwordTextField.text != nil {
+        if self.usernameTextField.text != nil, self.passwordTextField.text != nil, !(self.usernameTextField.text?.isEmpty)!, !(self.passwordTextField.text?.isEmpty)! {
             let request = CCRequest()
             request.register(username: self.usernameTextField.text!, password: self.passwordTextField.text!, completionHandler: { [weak self] user in
                 self?.user = user
