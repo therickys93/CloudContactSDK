@@ -23,6 +23,7 @@ struct CloudContact {
         static let CONTACTS = "api/contacts"
         static let DELETECONTACT = "api/deleteContact"
         static let UPDATECONTACT = "api/updateContact"
+        static let UNREGISTER = "api/unregister"
     }
 }
 
@@ -30,6 +31,16 @@ public class CCRequest {
     
     public init() {
         
+    }
+    
+    public func unregister(_ user: CCUser, completionHandler handler: @escaping (Bool) -> Void) {
+        makeApiRequest(CloudContact.Request.UNREGISTER, usingMethod: CloudContact.Method.POST, withParamenters: nil, apiKey: user.key, apiSecret: user.secret) { response in
+            if response.contains("message") {
+                handler(false)
+            } else {
+                handler(true)
+            }
+        }
     }
     
     public func updateContact(_ contact: CCContact, forUser user: CCUser, completionHandler handler: @escaping (Bool) -> Void) {
