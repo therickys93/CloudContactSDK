@@ -11,7 +11,7 @@ import CloudContactSDK
 
 class ContactsTableViewController: UITableViewController {
 
-    
+    private var refresh: UIRefreshControl = UIRefreshControl()
     var user: CCUser? {
         didSet {
             ContactsTableViewController.saveUser(user)
@@ -31,6 +31,16 @@ class ContactsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Cloud Contact"
+        self.refresh.tintColor = UIColor.black
+        self.refresh.backgroundColor = UIColor.white
+        self.refresh.attributedTitle = NSAttributedString(string: "Fetching contacts from cloud...")
+        self.refresh.addTarget(self, action: #selector(self.fetchContacts), for: .valueChanged)
+        if #available(iOS 10.0, *) {
+            self.tableView.refreshControl = self.refresh
+        } else {
+            // Fallback on earlier versions
+            self.tableView.addSubview(self.refresh)
+        }
         updateUI()
     }
     
@@ -123,13 +133,16 @@ class ContactsTableViewController: UITableViewController {
         }
     }
     
-    private func fetchContacts() {
+    @objc private func fetchContacts() {
         if self.user != nil {
             let request = CCRequest()
             request.fetchContacts(forUser: user!) { [weak self] contacts in
                 DispatchQueue.main.async {
+                    self?.refresh.beginRefreshing()
                     self?.contacts = contacts
                     self?.tableView.reloadData()
+                    sleep(1)
+                    self?.refresh.endRefreshing()
                 }
             }
         }

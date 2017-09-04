@@ -110,7 +110,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elq-1Y-506">
                                 <rect key="frame" x="16" y="171" width="153" height="129"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="Register"/>
+                                <state key="normal" title="Signup"/>
                                 <connections>
                                     <action selector="register:" destination="NuL-7X-6Yw" eventType="touchUpInside" id="4JD-uN-8Ly"/>
                                 </connections>
