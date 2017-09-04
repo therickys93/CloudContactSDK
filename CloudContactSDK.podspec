@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CloudContactSDK'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of CloudContactSDK.'
+  s.summary          = 'An API wrapper for Cloud Contact service.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+An API wrapper for Cloud Contact service. Check the example app for more details.
                        DESC
 
   s.homepage         = 'https://github.com/therickys93/CloudContactSDK'
